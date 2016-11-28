@@ -1,0 +1,77 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	background-color: #3c3d3c;
+	color: #fff;
+}
+
+.row {
+	margin:auto;
+	display:block;
+	width: 172px;
+	&.round_container {
+		margin-top:50px;
+	}
+	.round {
+		background-color: #123222;
+		height: 70px;
+		width: 70px;
+		border-radius: 50%;
+		display: inline-block;
+		margin: 7px;
+	}
+	.round:first-child {
+		background-color: #1e62a6;
+	}
+	.round:nth-child(2) {
+		background-color: #f5abca;
+	}
+	.round:nth-child(3) {
+		background-color: #fb5b33;
+	}
+	.round:nth-child(4) {
+		background-color: #52b689;
+	}
+}
+
+h1 {
+	font-family: 'Gloria Hallelujah', cursive;
+	text-align: center;
+	font-size: 50px;
+	margin: 0;
+}
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	li {
+		text-align: center;
+		border: 5px solid;
+		margin: auto;
+		width: 150px;
+		padding: 7px;
+		margin-bottom:10px;
+		font-family: 'Gloria Hallelujah', cursive;
+		font-size: 20px;
+	}
+}
+.a_block,.a_block:visited,.a_block:hover {
+			display: block;
+			color: #fff;
+			text-decoration: none;
+		}
+.btn-container {
+	width:236px;
+	margin:auto;
+	.round_button {
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	border: 3px solid #fff;
+	display:inline-block;
+	text-align: center;
+	line-height: 80px;
+	margin:15px;
+}
+}
