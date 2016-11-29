@@ -3,3 +3,9 @@ video model:
 	link 				type:text
 	description type:text
 	category 		type:text
+
+article model:
+	title 			type:text
+  content     type:text
+	category 		type:text
+

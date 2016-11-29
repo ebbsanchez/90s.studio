@@ -9,7 +9,5 @@ class MainController < ApplicationController
 		@videos = Video.all
 	end
 
-	def article
-	end
 
 end
