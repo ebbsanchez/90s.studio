@@ -35,6 +35,10 @@ body {
 	}
 }
 
+header {
+	padding: 30px 0;
+}
+
 h1 {
 	font-family: 'Gloria Hallelujah', cursive;
 	text-align: center;
@@ -57,21 +61,66 @@ ul {
 	}
 }
 .a_block,.a_block:visited,.a_block:hover {
-			display: block;
-			color: #fff;
-			text-decoration: none;
-		}
+		display: block;
+		color: #fff;
+		text-decoration: none;
+}
 .btn-container {
 	width:236px;
 	margin:auto;
 	.round_button {
-	border-radius: 50%;
-	width: 80px;
-	height: 80px;
-	border: 3px solid #fff;
-	display:inline-block;
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		border: 3px solid #fff;
+		display:inline-block;
+		text-align: center;
+		line-height: 80px;
+		margin:15px;
+	}
+}
+article {
+	font-size: 20px;
+	&.content_container {
+		border:5px solid;
+		padding: 10px;
+		margin: 10px;
+		// video.scss
+		&.video_content {
+			padding: 0;
+		}
+	}
+}
+.content_title {
 	text-align: center;
-	line-height: 80px;
-	margin:15px;
+	font-size: 25px;
+	margin: 20px 0;
 }
+
+
+// about.scss
+body {
+	background-color: #3c3d3c;
+	color: #fff;
+	margin: 0;
 }
+
+img.full {	width: 100%;	}
+img.bg {
+	opacity: 0.2;
+	position: absolute;
+	z-index: -1;
+}
+img#member_img {
+	margin:0 5%;
+	width:90%;
+}
+
+h1 {
+	font-family: 'Gloria Hallelujah', cursive;
+	text-align: center;
+	font-size: 50px;
+	margin: 0;
+}
+
+// video.scss

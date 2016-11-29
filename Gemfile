@@ -14,6 +14,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ckeditor', '~> 4.2'
 gem 'devise', '~> 4.2'
 gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'youtube_addy', '~> 1.0', '>= 1.0.4'
+
+
 
 group :development, :test do
   gem 'byebug'

@@ -1,0 +1,5 @@
+video model:
+	title 			type:text
+	link 				type:text
+	description type:text
+	category 		type:text

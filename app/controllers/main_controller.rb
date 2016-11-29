@@ -5,4 +5,11 @@ class MainController < ApplicationController
 	def about
 	end
 
+	def video
+		@videos = Video.all
+	end
+
+	def article
+	end
+
 end
