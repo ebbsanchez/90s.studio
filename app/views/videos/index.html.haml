@@ -1,19 +1,22 @@
 = image_tag 'four_color.png', class: "full bg"
 %header
-	%h1 Latest video
+	=link_to root_path, class: 'a_block' do
+		%h1 Latest video
 
-
+- if user_signed_in?
+	.btn-container
+		#edit_link_container.round_button=link_to 'New', "/editor/videos/new" , data: {no_turbolink: true}, id: "edit_link",class: "a_block"
 - @videos.each do |video|
 	%article.content_container.video_content
-		.content_title
-			=video.title
+		.content_title.video_title
+			=link_to video.title, video, class: "a_block"
 		%iframe{:src => "http://www.youtube.com/embed/#{ YouTubeAddy.extract_video_id( video.link )}", :frameborder => "0",width: "100%", height: "281px"}
-		
+		=truncate_html(video.description,length: 50)
 		%br/
 		%br/
 		%br/
 
-
+= will_paginate @videos
 .btn-container
 	.round_button= link_to "Home", root_path, class: "a_block"
 	.round_button= link_to "Top", "#", class: "a_block"

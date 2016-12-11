@@ -1,7 +1,23 @@
-= image_tag 'four_color.png', class: "full bg"
 %header
-	%h1 Article
+	=link_to root_path, class: 'a_block' do
+		%h1 Article
 
+- if user_signed_in?
+	.btn-container
+		#edit_link_container.round_button=link_to 'New', "/editor/articles/new" , data: {no_turbolink: true}, id: "edit_link",class: "a_block"
+
+- @articles.each do |article|
+	%article.articles_container.content_container{data: {mercury: "full"}}
+
+		%div.content_header
+			= link_to  article_path(article.id),class: "a_block ",data: {mercury: "full"} do
+				= image_tag article.head_photo
+				.article_title= article.title
+			%span.content_category= article.category= article.category
+
+		=truncate_html(article.content, length: 100,word_boundary: false)
+		%br/
+		%br/
 
 
 .btn-container

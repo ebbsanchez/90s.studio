@@ -1,0 +1,18 @@
+%article
+	= image_tag 'four_color.png', class: "full bg"
+
+	- if user_signed_in?
+		.btn-container
+			#edit_link_container.round_button=link_to 'Edit', "/editor" + request.path, data: {no_turbolink: true}, id: "edit_link",class: "a_block"
+			.round_button=link_to 'Delete', article_path, method: :delete, data: {no_turbolink: true, confirm: "確定刪除？"}, class: "a_block"
+
+	#image_url{data: {mercury: "simple"}}=@article.head_photo
+	.content_header
+		=image_tag @article.head_photo,id: 'head_photo'
+		%h2#article_title{data: {mercury: "simple"}}=raw @article.title
+
+	%article#content.articles_container.content_container{data: {mercury: "full"}}
+		=raw @article.content
+
+	.btn-container
+		.round_button=link_to 'Back', articles_path, data: {no_turbolink: true}, class: "a_block"
