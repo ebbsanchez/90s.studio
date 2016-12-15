@@ -26,6 +26,7 @@ gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'byebug'
+  gem "capistrano", "~> 3.7"
 end
 
 group :development do
