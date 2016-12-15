@@ -22,7 +22,7 @@ production:
   <<: *default
   adapter: postgresql
   host: localhost
-  database: rails_project_production
+  database: 90s-Studio_production
   username: rails
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
   database: db/production.sqlite3
