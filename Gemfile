@@ -21,11 +21,6 @@ gem 'youtube_addy', '~> 1.0', '>= 1.0.4'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'will_paginate', '~> 3.1.0'
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 756fb9d2a480b8c34a9d8ebc524f06ace7e68108
 group :development, :test do
   gem 'byebug'
   gem "capistrano", "~> 3.7"
@@ -38,8 +33,5 @@ end
 group :production do
   gem 'unicorn'
   gem 'pg'
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 756fb9d2a480b8c34a9d8ebc524f06ace7e68108
+
