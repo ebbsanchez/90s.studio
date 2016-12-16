@@ -23,14 +23,16 @@ gem 'will_paginate', '~> 3.1.0'
 
 
 
-
 group :development, :test do
   gem 'byebug'
   gem "capistrano", "~> 3.7"
 end
-
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
 
+group :production do
+  gem 'unicorn'
+  gem 'pg'
+end
