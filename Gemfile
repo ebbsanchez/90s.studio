@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'mercury-rails', :git => 'git://github.com/jejacks0n/mercury.git'
+gem 'mercury-rails'
 gem 'jquery-migrate-rails'
 gem 'truncate_html'
 gem 'devise', '~> 4.2'

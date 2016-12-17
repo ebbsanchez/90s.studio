@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 #     devise_for :users, skip: :sessions
 
-  mount Mercury::Engine => '/'
+#  mount Mercury::Engine => '/'
   root "main#index"
   get "about" => "main#about"
   resources :videos
