@@ -1,5 +1,10 @@
 %article
 
+	- if user_signed_in?
+		.btn-container
+			.round_button=link_to 'Delete', article_path, method: :delete, data: {no_turbolink: true, confirm: "確定刪除？"}, class: "a_block"
+
+
 	.content_header
 		=image_tag @article.head_photo,id: 'head_photo'
 	=simple_form_for @article do |f|
@@ -7,6 +12,7 @@
 		=f.input :head_photo, as: "string"
 		=f.input :content,as: :text,:input_html => {:class => "redactor"}
 		=f.submit
+
 
 
 	.btn-container

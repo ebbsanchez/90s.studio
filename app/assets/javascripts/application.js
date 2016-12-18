@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require jquery-migrate-min
-//= require mercury
+//= require redactor-rails
 //= require main

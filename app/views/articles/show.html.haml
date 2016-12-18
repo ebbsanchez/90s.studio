@@ -1,9 +1,7 @@
 %article
-	= image_tag 'four_color.png', class: "full bg"
-
 	- if user_signed_in?
 		.btn-container
-			#edit_link_container.round_button=link_to 'Edit', "/editor" + request.path, data: {no_turbolink: true}, id: "edit_link",class: "a_block"
+			#edit_link_container.round_button=link_to 'Edit', edit_article_path(@article), data: {no_turbolink: true}, id: "edit_link",class: "a_block"
 			.round_button=link_to 'Delete', article_path, method: :delete, data: {no_turbolink: true, confirm: "確定刪除？"}, class: "a_block"
 
 	#image_url{data: {mercury: "simple"}}=@article.head_photo

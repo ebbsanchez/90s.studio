@@ -5,8 +5,6 @@ $pc-media:960px;
 $pad-media:760px;
 $phone-media:480px;
 @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
-
-
 @mixin phone-width() {
 	@media all and (max-width: $phone-media) {
 		@content
@@ -18,7 +16,11 @@ $phone-media:480px;
 		@content
 	}
 }
-
+*{
+	  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 // home page
 @include pc-width {
 	.vertical-center {
@@ -50,7 +52,9 @@ body::after {
 	z-index:-1;
 	opacity: 0.4;
 }
-
+.redactor-editor{
+	color: #000;
+}
 .vertical-center{
 	transition: opacity ease 5s;
 }
@@ -157,7 +161,7 @@ ul {
 		}
 }
 .btn-container {
-	width:237px;
+	width:238px;
 	margin:auto;
 	.round_button {
 		border-radius: 50%;
@@ -190,6 +194,10 @@ article {
 		&.video_content {
 			padding: 0;
 		}
+		.video-content-content {
+			padding: 20px;
+		}
+
 	}
   // artucle.scss
 	&.articles_container {
@@ -253,6 +261,11 @@ img#head_photo{
 // There is head
 header {
 	position: relative;
+	#video_title {
+		max-width: 800px;
+		margin: auto;
+		font-size: 30px;
+	}
 }
 h1 {
 	font-family: 'Gloria Hallelujah', cursive;
@@ -260,13 +273,16 @@ h1 {
 	font-size: 50px;
 	margin: 0;
 }
-#article_title {  // in article/show
-	position: absolute;
-	top:100px;
-	left:20px;
-	font-family: monospace;
-	font-family: 'cwTeXYen', sans-serif;
+.content_header{
+	#article_title {  // in article/show
+		position: absolute;
+		top:100px;
+		left:20px;
+		font-family: monospace;
+		font-family: 'cwTeXYen', sans-serif;
+	}
 }
+
 .content_header{
 	position: relative;
 	.article_title { // in article/index
@@ -276,3 +292,64 @@ h1 {
 	}
 }
 
+// article > edit.scss
+label {
+	display:block;
+	width: 100%;
+}
+input[type="text"],
+input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	font-size:14px;
+	border-radius:5px;
+}
+.submit-container {
+	height: 50px;
+	padding-right: 30px;
+	input[type='submit']{
+		float: right;
+		// height: 40px;
+		// width: 100px;
+		// color: #000;
+    // background-color: #fefefe;
+    // border: none;
+
+    -webkit-transition: all 0s ease-out;
+		-moz-transition: all 0s ease-out;
+		-o-transition: all 0s ease-out;
+		-ms-transition: all 0s ease-out;
+		transition: all 0s ease-out;
+		height: 35px;
+		display: block;
+		font-family: Arial, "Helvetica", sans-serif;
+		font-size: 14px;
+		color: #222222;
+		text-decoration: none;
+		text-align: center;
+		text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+		padding: 4px 20px 0;
+		margin:  auto;
+		left: 30px;
+		position: relative;
+		cursor: pointer;
+		border: none;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-left: solid 1px #cecece;
+		background: #fefefe;
+		-webkit-box-shadow: 0px 5px 0px 0px #dedede;
+		box-shadow: 0px 5px 0px 0px #dedede;
+	}
+}
+
+// video > edit.scss
+.edit_video {
+	padding: 10px;
+	label {
+		margin: 10px 0px;
+	}
+	input[type="text"],
+	input[type="text"] {
+	}
+}

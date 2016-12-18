@@ -15,23 +15,26 @@ class VideosController < ApplicationController
 		@video.description = "描述"
 	end
 
+	def create 
+		@video = Video.new
+		@video.title = params[:video][:title].strip
+		@video.link = params[:video][:link].strip
+		@video.description = params[:video][:description].strip
+		@video.save!
+		redirect_to @video
+	end
+
+	def edit
+		@video = Video.find(params[:id])
+	end
 	def update
-		require_params
-		if params[:id] == 'new'
-			@video = Video.new
-			@video.title = params[:content][:video_title][:value].strip
-			@video.link = params[:content][:video_url][:value].strip
-			@video.description = params[:content][:video_description][:value].strip
-			@video.save!
-			render text:""
-		else
-			@video = Video.find(params[:id])
-			@video.title = params[:content][:video_title][:value].strip
-			@video.link = params[:content][:video_url][:value].strip
-			@video.description = params[:content][:video_description][:value].strip
-			@video.save!
-			render text: ""
-		end
+		@video = Video.find(params[:id])
+		@video.title = params[:video][:title].strip
+		@video.link = params[:video][:link].strip
+		@video.description = params[:video][:description].strip
+		@video.save!
+		redirect_to @video
+	
 	end
 
 	def destroy

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users, only: :sessions
 
 # * skip: tell which controller you want to skip routes from being created.
@@ -10,7 +11,5 @@ Rails.application.routes.draw do
   root "main#index"
   get "about" => "main#about"
   resources :videos
-  resources :articles do
-  	put 'mercury_update', on: :member
-  end
+  resources :articles
 end

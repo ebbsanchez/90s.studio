@@ -11,7 +11,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'mercury-rails'
+
 gem 'jquery-migrate-rails'
 gem 'truncate_html'
 gem 'devise', '~> 4.2'
@@ -20,6 +20,11 @@ gem 'html2haml', '~> 2.0'
 gem 'youtube_addy', '~> 1.0', '>= 1.0.4'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'will_paginate', '~> 3.1.0'
+
+gem "carrierwave"
+gem "mini_magick"
+gem 'redactor-rails'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'

@@ -14,23 +14,27 @@ class ArticlesController < ApplicationController
 		@article.content = "內文"
 	end
 
-	def update # include create
-		if params[:id] == 'new'
-			@article = Article.new
-			@article.title = params[:content][:article_title][:value]
-			@article.content = params[:content][:content][:value]
-			@article.head_photo = params[:content][:image_url][:value]
-			@article.save!
-			redirect_to @article
-		else
-			@article = Article.find(params[:id])
-			@article.title = params[:content][:article_title][:value]
-			@article.content = params[:content][:content][:value]
-			@article.head_photo = params[:content][:image_url][:value]
-			@article.save!
-			render text: ""
-		end
+	def create
+		@article = Article.new
+		@article.title = params[:article][:title]
+		@article.content = params[:article][:content]
+		@article.head_photo = params[:article][:head_photo]
+		@article.save!
+		redirect_to @article
+	end
 
+
+	def edit
+		@article = Article.find(params[:id])
+	end
+
+	def update # include create
+		@article = Article.find(params[:id])
+		@article.title = params[:article][:title]
+		@article.content = params[:article][:content]
+		@article.head_photo = params[:article][:head_photo]
+		@article.save!
+		redirect_to @article
 	end
 
 	# def mercury_update
