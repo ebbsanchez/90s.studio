@@ -32,6 +32,9 @@ $phone-media:480px;
   -webkit-justify-content: center;
           justify-content: center;
   }
+  iframe {
+  	height: 592px;
+  }
 }
 
 body {
@@ -54,6 +57,12 @@ body::after {
 }
 .redactor-editor{
 	color: #000;
+}
+copyright {
+	text-align: center;
+	position:absolute;
+	bottom: 0;
+	width: 100%;
 }
 .vertical-center{
 	transition: opacity ease 5s;
@@ -213,9 +222,13 @@ article {
 	text-align: left;
 	font-size: 25px;
 	margin: 20px 0;
+	@include pc-width {
+		font-size: 40px;
+	}
 	&.video_title {
 		padding-left:10px;
 	}
+
 
 }
 .content_category {
@@ -254,7 +267,6 @@ img#member_img {
 }
 img#head_photo{
 	width:100%;
-	opacity:0.8;
 }
 
 
@@ -289,6 +301,14 @@ h1 {
 		position: absolute;
 		top:100px;
 		left:20px;
+		@include pc-width {
+			font-size: 40px;
+		}
+	}
+	@include pc-width {
+		h2 {
+			font-size: 40px;
+		}
 	}
 }
 

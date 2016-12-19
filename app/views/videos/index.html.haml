@@ -11,7 +11,8 @@
 			=link_to video.title, video, class: "a_block"
 		%iframe{:src => "http://www.youtube.com/embed/#{ YouTubeAddy.extract_video_id( video.link )}", :frameborder => "0",width: "100%", height: "281px"}
 		.video-content-content
-			=truncate_html(video.description,length: 50)
+			=truncate_html(video.description,length: 130)
+			%b=link_to '繼續閱讀', video, class: 'countinue-btn'
 		%br/
 		%br/
 		%br/
